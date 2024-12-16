@@ -52,7 +52,7 @@ pub async fn list_paths() -> HttpResult<Vec<String>> {
 /// # Arguments
 ///
 /// * `name` - The chain name. Must match the name of the chain's folder in the root directory of the
-/// [chain registry](https://github.com/cosmos/chain-registry).
+///   [chain registry](https://github.com/cosmos/chain-registry).
 pub async fn get_assets(name: &str) -> HttpResult<Option<AssetList>> {
     let path = format!("{}/assetlist.json", name);
     get_file_typed_content(GIT_REF, &path).await
@@ -64,7 +64,7 @@ pub async fn get_assets(name: &str) -> HttpResult<Option<AssetList>> {
 /// # Arguments
 ///
 /// * `name` - The chain name. Must match the name of the chain's folder in the root directory of the
-/// [chain registry](https://github.com/cosmos/chain-registry).
+///   [chain registry](https://github.com/cosmos/chain-registry).
 pub async fn get_chain(name: &str) -> HttpResult<Option<ChainInfo>> {
     let path = format!("{}/chain.json", name);
     get_file_typed_content(GIT_REF, &path).await
@@ -76,7 +76,7 @@ pub async fn get_chain(name: &str) -> HttpResult<Option<ChainInfo>> {
 /// # Arguments
 ///
 /// * `name` - The chain name. Must match the name of the chain's folder in the root directory of the
-/// [chain registry](https://github.com/cosmos/chain-registry).
+///   [chain registry](https://github.com/cosmos/chain-registry).
 pub async fn get_path(chain_a: &str, chain_b: &str) -> HttpResult<Option<IBCPath>> {
     // path names order the chain names alphabetically
     let path = format!(
